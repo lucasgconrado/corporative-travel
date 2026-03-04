@@ -1,0 +1,481 @@
+name: Pedidos
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/orders
+    metadata:
+      custom: []
+      groupName: Pedidos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Criar um novo pedido'
+      description: 'Cria um pedido de viagem para o usuário autenticado.'
+      authenticated: true
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      status:
+        custom: []
+        name: status
+        description: 'Filtrar por status. Exemplo: aprovado'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      destino:
+        custom: []
+        name: destino
+        description: 'Filtrar por destino. Exemplo: São Paulo'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_inicio:
+        custom: []
+        name: data_inicio
+        description: 'date Filtrar por data inicial. Exemplo: 2026-03-01'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_fim:
+        custom: []
+        name: data_fim
+        description: 'date Filtrar por data final. Exemplo: 2026-03-31'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      status: architecto
+      destino: architecto
+      data_inicio: architecto
+      data_fim: architecto
+    bodyParameters:
+      solicitante:
+        custom: []
+        name: solicitante
+        description: 'Nome do solicitante. Exemplo: Lucas'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      destino:
+        custom: []
+        name: destino
+        description: 'Destino da viagem. Exemplo: São Paulo'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_ida:
+        custom: []
+        name: data_ida
+        description: 'Data de ida. Exemplo: 2026-03-10'
+        required: true
+        example: architecto
+        type: date
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_volta:
+        custom: []
+        name: data_volta
+        description: 'Data de volta. Exemplo: 2026-03-15'
+        required: true
+        example: architecto
+        type: date
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      solicitante: architecto
+      destino: architecto
+      data_ida: architecto
+      data_volta: architecto
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 201
+        content: |-
+          {
+            "id": 1,
+            "solicitante": "Lucas",
+            "destino": "São Paulo",
+            "data_ida": "2026-03-10",
+            "data_volta": "2026-03-15",
+            "status": "solicitado"
+          }
+        headers: []
+        description: ''
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/orders
+    metadata:
+      custom: []
+      groupName: Pedidos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      status:
+        custom: []
+        name: status
+        description: 'Filtrar por status. Exemplo: aprovado'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      destino:
+        custom: []
+        name: destino
+        description: 'Filtrar por destino. Exemplo: São Paulo'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_inicio:
+        custom: []
+        name: data_inicio
+        description: 'date Filtrar por data inicial. Exemplo: 2026-03-01'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_fim:
+        custom: []
+        name: data_fim
+        description: 'date Filtrar por data final. Exemplo: 2026-03-31'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      status: architecto
+      destino: architecto
+      data_inicio: architecto
+      data_fim: architecto
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/orders/{id}'
+    metadata:
+      custom: []
+      groupName: Pedidos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Detalhar pedido'
+      description: 'Retorna os dados de um pedido específico do usuário autenticado.'
+      authenticated: true
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'ID do pedido. Exemplo: 1'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 16
+    queryParameters:
+      status:
+        custom: []
+        name: status
+        description: 'Filtrar por status. Exemplo: aprovado'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      destino:
+        custom: []
+        name: destino
+        description: 'Filtrar por destino. Exemplo: São Paulo'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_inicio:
+        custom: []
+        name: data_inicio
+        description: 'date Filtrar por data inicial. Exemplo: 2026-03-01'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_fim:
+        custom: []
+        name: data_fim
+        description: 'date Filtrar por data final. Exemplo: 2026-03-31'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      status: architecto
+      destino: architecto
+      data_inicio: architecto
+      data_fim: architecto
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+            "id": 1,
+            "solicitante": "Lucas",
+            "destino": "São Paulo",
+            "data_ida": "2026-03-10",
+            "data_volta": "2026-03-15",
+            "status": "solicitado"
+          }
+        headers: []
+        description: ''
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+            "message": "No query results for model [App\\Models\\Order] 999"
+          }
+        headers: []
+        description: ''
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PATCH
+    uri: 'api/orders/{id}/status'
+    metadata:
+      custom: []
+      groupName: Pedidos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Atualizar status do pedido'
+      description: 'Permite que apenas administradores atualizem o status de um pedido.'
+      authenticated: true
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'ID do pedido. Exemplo: 1'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 16
+    queryParameters:
+      status:
+        custom: []
+        name: status
+        description: 'Filtrar por status. Exemplo: aprovado'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      destino:
+        custom: []
+        name: destino
+        description: 'Filtrar por destino. Exemplo: São Paulo'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_inicio:
+        custom: []
+        name: data_inicio
+        description: 'date Filtrar por data inicial. Exemplo: 2026-03-01'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      data_fim:
+        custom: []
+        name: data_fim
+        description: 'date Filtrar por data final. Exemplo: 2026-03-31'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      status: architecto
+      destino: architecto
+      data_inicio: architecto
+      data_fim: architecto
+    bodyParameters:
+      status:
+        custom: []
+        name: status
+        description: 'Novo status do pedido. Exemplo: aprovado'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      status: architecto
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+            "id": 1,
+            "solicitante": "Lucas",
+            "destino": "São Paulo",
+            "data_ida": "2026-03-10",
+            "data_volta": "2026-03-15",
+            "status": "aprovado"
+          }
+        headers: []
+        description: ''
+      -
+        custom: []
+        status: 400
+        content: |-
+          {
+            "error": "Não é possível cancelar após aprovação"
+          }
+        headers: []
+        description: ''
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+            "error": "Unauthorized"
+          }
+        headers: []
+        description: ''
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
