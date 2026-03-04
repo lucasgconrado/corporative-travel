@@ -4,7 +4,7 @@
       <div class="left">
         <h2 class="slide-in">Bem-vindo ao Corporate Travel</h2>
         <p class="slide-in delay">
-          Uma nova solução para suas viagens corporativas. Aqui você pode personalizar esse texto para explicar melhor sua proposta, e ele ficará justificado ocupando o centro da metade esquerda da tela.
+          Uma nova solução para suas viagens corporativas. Viaje pelo Brasil e aproveite a facilidade no gerenciamento.
         </p>
       </div>
       <div class="right">
