@@ -2,6 +2,13 @@
 
 Um sistema de gerenciamento de viagens corporativas.
 
+<img width="2534" height="905" alt="image" src="https://github.com/user-attachments/assets/aad0c0a5-b25b-4ba0-8c97-daff48f0c65e" />
+
+<img width="754" height="729" alt="image" src="https://github.com/user-attachments/assets/96e7255b-7413-4be3-9e86-6994a4076eaa" />
+
+<img width="760" height="506" alt="image" src="https://github.com/user-attachments/assets/e8d9f8ad-ff5b-4fc3-8c96-6d6e7f74b0bd" />
+
+
 ---
 
 ## 🚀 Como executar
@@ -42,19 +49,30 @@ Um sistema de gerenciamento de viagens corporativas.
 **Rodando no Docker:**
 
 DB_CONNECTION=pgsql
+
 DB_HOST=db
+
 DB_PORT=5432
+
 DB_DATABASE=travel_orders
+
 DB_USERNAME=laravel
+
 DB_PASSWORD=subaru
+
 
 **Rodando localmente:**
 
 DB_CONNECTION=pgsql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3725
+
 DB_DATABASE=travel_orders
+
 DB_USERNAME=laravel
+
 DB_PASSWORD=subaru
 
 
