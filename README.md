@@ -42,19 +42,30 @@ Um sistema de gerenciamento de viagens corporativas.
 **Rodando no Docker:**
 
 DB_CONNECTION=pgsql
+
 DB_HOST=db
+
 DB_PORT=5432
+
 DB_DATABASE=travel_orders
+
 DB_USERNAME=laravel
+
 DB_PASSWORD=subaru
+
 
 **Rodando localmente:**
 
 DB_CONNECTION=pgsql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3725
+
 DB_DATABASE=travel_orders
+
 DB_USERNAME=laravel
+
 DB_PASSWORD=subaru
 
 
