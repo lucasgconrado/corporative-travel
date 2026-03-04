@@ -36,7 +36,7 @@ async function login() {
       password: password.value,
     })
     localStorage.setItem('token', res.data.token)
-    localStorage.setItem('user', JSON.stringify(res.data.user)) // <-- salva o usuário
+    localStorage.setItem('user', JSON.stringify(res.data.user))
     alert('Login efetuado com sucesso!')
     router.push('/orders')
   } catch (error) {
